@@ -117,14 +117,5 @@ YOLOv8 for crack and corrosion detection.
 
 Inference: Combine modality outputs for final status.
 
-👥 Contributors
 
-Aanika Bhatnagar (122A9001)
 
-Sania Nandi (122A9046)
-
-Shravani Wani (122A9051)
-
-Sahil Maskar (223A9065)
-
-Supervised by Prof. Jasmin Hirani, Dept. of AI & ML, SIES Graduate School of Technology.
