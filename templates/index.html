@@ -1,0 +1,48 @@
+{% extends "base.html" %}
+{% block content %}
+  <header id="hero" class="hero">
+    <div class="hero-overlay"></div>
+    <div class="hero-content container text-center" data-aos="fade-up" data-aos-duration="1000">
+      <h1>AI-Powered Predictive Maintenance</h1>
+      <p>Crack Detection ● Feature-Based Prediction ● Signal Analysis</p>
+    </div>
+  </header>
+
+  <section id="detection" class="container my-5">
+    <div class="card p-4" data-aos="zoom-in" data-aos-duration="1000">
+      <h2 class="text-center mb-3">Crack Detection</h2>
+      <form id="crackForm">
+        <input type="file" id="imageInput" name="image" accept="image/*" required>
+        <button type="submit" class="btn btn-primary mt-2 w-100">Upload & Detect</button>
+      </form>
+      <div id="crackAlert"></div>
+      <img id="crackResult" class="mt-3" style="display:none;width:100%;" alt="Result" />
+    </div>
+  </section>
+
+  <section id="prediction" class="container my-5">
+    <div class="card p-4" data-aos="fade-up" data-aos-duration="1000">
+      <h2 class="text-center mb-3">Machine Failure Prediction</h2>
+      <form id="featureForm">
+        Temperature<input type="number" id="f1" step="any" required class="form-control mb-2">
+        Vibration<input type="number" id="f2"  step="any" required class="form-control mb-2">
+        Power Usage<input type="number" id="f3" step="any" required class="form-control mb-2">
+        Humidity<input type="number" id="f4"  step="any" required class="form-control mb-2">
+        Machine Type<input type="text"   id="f5"  required class="form-control mb-2">
+        <button type="submit" class="btn btn-primary w-100">Predict</button>
+      </form>
+      <div id="featureResult" class="mt-3 text-center"></div>
+    </div>
+  </section>
+
+  <section id="fault" class="container my-5">
+    <div class="card p-4" data-aos="fade-up" data-aos-duration="1000">
+      <h2 class="text-center mb-3">Signal Fault Detection (.mat)</h2>
+      <form id="matForm" enctype="multipart/form-data">
+        <input type="file" id="matInput" name="file" accept=".mat" required>
+        <button type="submit" class="btn btn-primary mt-2 w-100">Upload & Analyze</button>
+      </form>
+      <div id="matResult" class="mt-3 text-center"></div>
+    </div>
+  </section>
+{% endblock %}
